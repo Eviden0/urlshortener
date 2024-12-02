@@ -1,0 +1,28 @@
+server:
+  address: ":8080"
+  read_timeout: 5s
+  write_timeout: 5s
+
+database:
+  driver: "postgres"
+  host: "localhost"
+  port: 5432
+  user: "lang"
+  password: "password"
+  dbname: "urldb"
+  sslmode: "disable"
+  max_open_conns: 10
+  max_idle_conns: 5
+
+redis:
+  address: "localhost:6379"
+  password: ""
+  db: 0
+
+shortcode:
+  min_length: 6
+
+app:
+  base_url: "http://localhost:8080"
+  cleanup_interval: 1h
+  default_expiration: 24h
